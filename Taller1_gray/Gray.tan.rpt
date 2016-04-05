@@ -1,0 +1,288 @@
+Classic Timing Analyzer report for Gray
+Tue Apr 05 00:31:02 2016
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. Clock Hold: 'clock'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                       ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+--------------+--------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From         ; To           ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+--------------+--------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 3.308 ns                                       ; A            ; ESTADO.s1    ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 10.763 ns                                      ; SHIFT_REG[1] ; Z[1]         ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -2.940 ns                                      ; A            ; ESTADO.s0    ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A                                      ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s8    ; ESTADO.s1    ; clock      ; clock    ; 0            ;
+; Clock Hold: 'clock'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; ESTADO.s4    ; SHIFT_REG[1] ; clock      ; clock    ; 10           ;
+; Total number of failed paths ;                                          ;               ;                                                ;              ;              ;            ;          ; 10           ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+--------------+--------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                       ;
++-------+------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From      ; To        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s8 ; ESTADO.s1 ; clock      ; clock    ; None                        ; None                      ; 0.594 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s0 ; ESTADO.s1 ; clock      ; clock    ; None                        ; None                      ; 0.414 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s5 ; ESTADO.s6 ; clock      ; clock    ; None                        ; None                      ; 0.534 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s3 ; ESTADO.s4 ; clock      ; clock    ; None                        ; None                      ; 0.533 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s6 ; ESTADO.s7 ; clock      ; clock    ; None                        ; None                      ; 0.532 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s2 ; ESTADO.s3 ; clock      ; clock    ; None                        ; None                      ; 0.531 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s7 ; ESTADO.s8 ; clock      ; clock    ; None                        ; None                      ; 0.524 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s1 ; ESTADO.s2 ; clock      ; clock    ; None                        ; None                      ; 0.521 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s0 ; ESTADO.s0 ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; ESTADO.s4 ; ESTADO.s5 ; clock      ; clock    ; None                        ; None                      ; 0.415 ns                ;
++-------+------------------------------------------------+-----------+-----------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clock'                                                                                                                                                              ;
++------------------------------------------+-----------+--------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From      ; To           ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+-----------+--------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; ESTADO.s4 ; SHIFT_REG[1] ; clock      ; clock    ; None                       ; None                       ; 0.886 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s5 ; SHIFT_REG[1] ; clock      ; clock    ; None                       ; None                       ; 0.922 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s3 ; SHIFT_REG[0] ; clock      ; clock    ; None                       ; None                       ; 1.050 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s7 ; SHIFT_REG[2] ; clock      ; clock    ; None                       ; None                       ; 1.058 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s6 ; SHIFT_REG[2] ; clock      ; clock    ; None                       ; None                       ; 1.087 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s2 ; SHIFT_REG[0] ; clock      ; clock    ; None                       ; None                       ; 1.145 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s6 ; SHIFT_REG[0] ; clock      ; clock    ; None                       ; None                       ; 1.298 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s5 ; SHIFT_REG[2] ; clock      ; clock    ; None                       ; None                       ; 1.308 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s3 ; SHIFT_REG[1] ; clock      ; clock    ; None                       ; None                       ; 1.330 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ESTADO.s5 ; SHIFT_REG[0] ; clock      ; clock    ; None                       ; None                       ; 1.425 ns                 ;
++------------------------------------------+-----------+--------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-----------------------------------------------------------------+
+; tsu                                                             ;
++-------+--------------+------------+------+-----------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To        ; To Clock ;
++-------+--------------+------------+------+-----------+----------+
+; N/A   ; None         ; 3.308 ns   ; A    ; ESTADO.s1 ; clock    ;
+; N/A   ; None         ; 3.179 ns   ; A    ; ESTADO.s0 ; clock    ;
++-------+--------------+------------+------+-----------+----------+
+
+
++----------------------------------------------------------------------+
+; tco                                                                  ;
++-------+--------------+------------+--------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From         ; To   ; From Clock ;
++-------+--------------+------------+--------------+------+------------+
+; N/A   ; None         ; 10.763 ns  ; SHIFT_REG[1] ; Z[1] ; clock      ;
+; N/A   ; None         ; 10.744 ns  ; SHIFT_REG[0] ; Z[0] ; clock      ;
+; N/A   ; None         ; 9.277 ns   ; SHIFT_REG[2] ; Z[2] ; clock      ;
+; N/A   ; None         ; 7.703 ns   ; ESTADO.s0    ; Z[1] ; clock      ;
+; N/A   ; None         ; 7.590 ns   ; ESTADO.s0    ; Z[0] ; clock      ;
+; N/A   ; None         ; 5.920 ns   ; ESTADO.s0    ; Z[2] ; clock      ;
++-------+--------------+------------+--------------+------+------------+
+
+
++-----------------------------------------------------------------------+
+; th                                                                    ;
++---------------+-------------+-----------+------+-----------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To        ; To Clock ;
++---------------+-------------+-----------+------+-----------+----------+
+; N/A           ; None        ; -2.940 ns ; A    ; ESTADO.s0 ; clock    ;
+; N/A           ; None        ; -3.069 ns ; A    ; ESTADO.s1 ; clock    ;
++---------------+-------------+-----------+------+-----------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Apr 05 00:31:02 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Gray -c Gray --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "SHIFT_REG[0]" is a latch
+    Warning: Node "SHIFT_REG[1]" is a latch
+    Warning: Node "SHIFT_REG[2]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "ESTADO.s0" as buffer
+Info: Clock "clock" Internal fmax is restricted to 500.0 MHz between source register "ESTADO.s8" and destination register "ESTADO.s1"
+    Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.594 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y16_N9; Fanout = 1; REG Node = 'ESTADO.s8'
+            Info: 2: + IC(0.214 ns) + CELL(0.225 ns) = 0.439 ns; Loc. = LCCOMB_X1_Y16_N2; Fanout = 1; COMB Node = 'Selector0~0'
+            Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 0.594 ns; Loc. = LCFF_X1_Y16_N3; Fanout = 1; REG Node = 'ESTADO.s1'
+            Info: Total cell delay = 0.380 ns ( 63.97 % )
+            Info: Total interconnect delay = 0.214 ns ( 36.03 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "clock" to destination register is 2.466 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8; COMB Node = 'clock~clkctrl'
+                Info: 3: + IC(0.651 ns) + CELL(0.618 ns) = 2.466 ns; Loc. = LCFF_X1_Y16_N3; Fanout = 1; REG Node = 'ESTADO.s1'
+                Info: Total cell delay = 1.472 ns ( 59.69 % )
+                Info: Total interconnect delay = 0.994 ns ( 40.31 % )
+            Info: - Longest clock path from clock "clock" to source register is 2.466 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8; COMB Node = 'clock~clkctrl'
+                Info: 3: + IC(0.651 ns) + CELL(0.618 ns) = 2.466 ns; Loc. = LCFF_X1_Y16_N9; Fanout = 1; REG Node = 'ESTADO.s8'
+                Info: Total cell delay = 1.472 ns ( 59.69 % )
+                Info: Total interconnect delay = 0.994 ns ( 40.31 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Warning: Circuit may not operate. Detected 10 non-operational path(s) clocked by clock "clock" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "ESTADO.s4" and destination pin or register "SHIFT_REG[1]" for clock "clock" (Hold time is 2.367 ns)
+    Info: + Largest clock skew is 3.347 ns
+        Info: + Longest clock path from clock "clock" to destination register is 5.813 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(1.123 ns) + CELL(0.712 ns) = 2.689 ns; Loc. = LCFF_X1_Y16_N1; Fanout = 6; REG Node = 'ESTADO.s0'
+            Info: 3: + IC(2.176 ns) + CELL(0.000 ns) = 4.865 ns; Loc. = CLKCTRL_G12; Fanout = 3; COMB Node = 'ESTADO.s0~clkctrl'
+            Info: 4: + IC(0.895 ns) + CELL(0.053 ns) = 5.813 ns; Loc. = LCCOMB_X1_Y16_N18; Fanout = 1; REG Node = 'SHIFT_REG[1]'
+            Info: Total cell delay = 1.619 ns ( 27.85 % )
+            Info: Total interconnect delay = 4.194 ns ( 72.15 % )
+        Info: - Shortest clock path from clock "clock" to source register is 2.466 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(0.651 ns) + CELL(0.618 ns) = 2.466 ns; Loc. = LCFF_X1_Y16_N17; Fanout = 2; REG Node = 'ESTADO.s4'
+            Info: Total cell delay = 1.472 ns ( 59.69 % )
+            Info: Total interconnect delay = 0.994 ns ( 40.31 % )
+    Info: - Micro clock to output delay of source is 0.094 ns
+    Info: - Shortest register to register delay is 0.886 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y16_N17; Fanout = 2; REG Node = 'ESTADO.s4'
+        Info: 2: + IC(0.000 ns) + CELL(0.333 ns) = 0.333 ns; Loc. = LCCOMB_X1_Y16_N16; Fanout = 1; COMB Node = 'WideOr1'
+        Info: 3: + IC(0.325 ns) + CELL(0.228 ns) = 0.886 ns; Loc. = LCCOMB_X1_Y16_N18; Fanout = 1; REG Node = 'SHIFT_REG[1]'
+        Info: Total cell delay = 0.561 ns ( 63.32 % )
+        Info: Total interconnect delay = 0.325 ns ( 36.68 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "ESTADO.s1" (data pin = "A", clock pin = "clock") is 3.308 ns
+    Info: + Longest pin to register delay is 5.684 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_E20; Fanout = 2; PIN Node = 'A'
+        Info: 2: + IC(4.343 ns) + CELL(0.366 ns) = 5.529 ns; Loc. = LCCOMB_X1_Y16_N2; Fanout = 1; COMB Node = 'Selector0~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.684 ns; Loc. = LCFF_X1_Y16_N3; Fanout = 1; REG Node = 'ESTADO.s1'
+        Info: Total cell delay = 1.341 ns ( 23.59 % )
+        Info: Total interconnect delay = 4.343 ns ( 76.41 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.466 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.651 ns) + CELL(0.618 ns) = 2.466 ns; Loc. = LCFF_X1_Y16_N3; Fanout = 1; REG Node = 'ESTADO.s1'
+        Info: Total cell delay = 1.472 ns ( 59.69 % )
+        Info: Total interconnect delay = 0.994 ns ( 40.31 % )
+Info: tco from clock "clock" to destination pin "Z[1]" through register "SHIFT_REG[1]" is 10.763 ns
+    Info: + Longest clock path from clock "clock" to source register is 5.813 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(1.123 ns) + CELL(0.712 ns) = 2.689 ns; Loc. = LCFF_X1_Y16_N1; Fanout = 6; REG Node = 'ESTADO.s0'
+        Info: 3: + IC(2.176 ns) + CELL(0.000 ns) = 4.865 ns; Loc. = CLKCTRL_G12; Fanout = 3; COMB Node = 'ESTADO.s0~clkctrl'
+        Info: 4: + IC(0.895 ns) + CELL(0.053 ns) = 5.813 ns; Loc. = LCCOMB_X1_Y16_N18; Fanout = 1; REG Node = 'SHIFT_REG[1]'
+        Info: Total cell delay = 1.619 ns ( 27.85 % )
+        Info: Total interconnect delay = 4.194 ns ( 72.15 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 4.950 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X1_Y16_N18; Fanout = 1; REG Node = 'SHIFT_REG[1]'
+        Info: 2: + IC(0.367 ns) + CELL(0.053 ns) = 0.420 ns; Loc. = LCCOMB_X1_Y16_N26; Fanout = 1; COMB Node = 'Z~4'
+        Info: 3: + IC(2.396 ns) + CELL(2.134 ns) = 4.950 ns; Loc. = PIN_U4; Fanout = 0; PIN Node = 'Z[1]'
+        Info: Total cell delay = 2.187 ns ( 44.18 % )
+        Info: Total interconnect delay = 2.763 ns ( 55.82 % )
+Info: th for register "ESTADO.s0" (data pin = "A", clock pin = "clock") is -2.940 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.595 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(1.123 ns) + CELL(0.618 ns) = 2.595 ns; Loc. = LCFF_X1_Y16_N1; Fanout = 6; REG Node = 'ESTADO.s0'
+        Info: Total cell delay = 1.472 ns ( 56.72 % )
+        Info: Total interconnect delay = 1.123 ns ( 43.28 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.684 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_E20; Fanout = 2; PIN Node = 'A'
+        Info: 2: + IC(4.343 ns) + CELL(0.366 ns) = 5.529 ns; Loc. = LCCOMB_X1_Y16_N0; Fanout = 1; COMB Node = 'ESTADO.s0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.684 ns; Loc. = LCFF_X1_Y16_N1; Fanout = 6; REG Node = 'ESTADO.s0'
+        Info: Total cell delay = 1.341 ns ( 23.59 % )
+        Info: Total interconnect delay = 4.343 ns ( 76.41 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 209 megabytes
+    Info: Processing ended: Tue Apr 05 00:31:02 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
