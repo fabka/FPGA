@@ -1,0 +1,325 @@
+Simulator report for Calculadora
+Tue Apr 12 19:06:36 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 93 nodes     ;
+; Simulation Coverage         ;      90.54 % ;
+; Total Number of Transitions ; 9472         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.54 % ;
+; Total nodes checked                                 ; 93           ;
+; Total output ports checked                          ; 148          ;
+; Total output ports with complete 1/0-value coverage ; 134          ;
+; Total output ports with no 1/0-value coverage       ; 13           ;
+; Total output ports with no 1-value coverage         ; 14           ;
+; Total output ports with no 0-value coverage         ; 13           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                   ; Output Port Name                                                                                      ; Output Port Type ;
++---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |Calculadora|Sumador:suma|Add0~1                                                            ; |Calculadora|Sumador:suma|Add0~1                                                                      ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~1                                                            ; |Calculadora|Sumador:suma|Add0~2                                                                      ; cout             ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1            ; dataout2         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT1   ; dataout3         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT2   ; dataout4         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT3   ; dataout5         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT4   ; dataout6         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT5   ; dataout7         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT6   ; dataout8         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT7   ; dataout9         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT8   ; dataout10        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT9   ; dataout11        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT10  ; dataout12        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT11  ; dataout13        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT12  ; dataout14        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT13  ; dataout15        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1  ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT14  ; dataout16        ;
+; |Calculadora|Restador:resta|r[0]~1                                                          ; |Calculadora|Restador:resta|r[0]~1                                                                    ; sumout           ;
+; |Calculadora|Restador:resta|r[0]~1                                                          ; |Calculadora|Restador:resta|r[0]~3                                                                    ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~5                                                            ; |Calculadora|Sumador:suma|Add0~5                                                                      ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~5                                                            ; |Calculadora|Sumador:suma|Add0~6                                                                      ; cout             ;
+; |Calculadora|Restador:resta|r[1]~5                                                          ; |Calculadora|Restador:resta|r[1]~5                                                                    ; sumout           ;
+; |Calculadora|Restador:resta|r[1]~5                                                          ; |Calculadora|Restador:resta|r[1]~6                                                                    ; cout             ;
+; |Calculadora|Restador:resta|r[1]~5                                                          ; |Calculadora|Restador:resta|r[1]~7                                                                    ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~9                                                            ; |Calculadora|Sumador:suma|Add0~9                                                                      ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~9                                                            ; |Calculadora|Sumador:suma|Add0~10                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[2]~9                                                          ; |Calculadora|Restador:resta|r[2]~9                                                                    ; sumout           ;
+; |Calculadora|Restador:resta|r[2]~9                                                          ; |Calculadora|Restador:resta|r[2]~10                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[2]~9                                                          ; |Calculadora|Restador:resta|r[2]~11                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~13                                                           ; |Calculadora|Sumador:suma|Add0~13                                                                     ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~13                                                           ; |Calculadora|Sumador:suma|Add0~14                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[3]~13                                                         ; |Calculadora|Restador:resta|r[3]~13                                                                   ; sumout           ;
+; |Calculadora|Restador:resta|r[3]~13                                                         ; |Calculadora|Restador:resta|r[3]~14                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[3]~13                                                         ; |Calculadora|Restador:resta|r[3]~15                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~17                                                           ; |Calculadora|Sumador:suma|Add0~17                                                                     ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~17                                                           ; |Calculadora|Sumador:suma|Add0~18                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[4]~17                                                         ; |Calculadora|Restador:resta|r[4]~17                                                                   ; sumout           ;
+; |Calculadora|Restador:resta|r[4]~17                                                         ; |Calculadora|Restador:resta|r[4]~18                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[4]~17                                                         ; |Calculadora|Restador:resta|r[4]~19                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~21                                                           ; |Calculadora|Sumador:suma|Add0~21                                                                     ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~21                                                           ; |Calculadora|Sumador:suma|Add0~22                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[5]~21                                                         ; |Calculadora|Restador:resta|r[5]~21                                                                   ; sumout           ;
+; |Calculadora|Restador:resta|r[5]~21                                                         ; |Calculadora|Restador:resta|r[5]~22                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[5]~21                                                         ; |Calculadora|Restador:resta|r[5]~23                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~25                                                           ; |Calculadora|Sumador:suma|Add0~25                                                                     ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~25                                                           ; |Calculadora|Sumador:suma|Add0~26                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[6]~25                                                         ; |Calculadora|Restador:resta|r[6]~25                                                                   ; sumout           ;
+; |Calculadora|Restador:resta|r[6]~25                                                         ; |Calculadora|Restador:resta|r[6]~26                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[6]~25                                                         ; |Calculadora|Restador:resta|r[6]~27                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~29                                                           ; |Calculadora|Sumador:suma|Add0~29                                                                     ; sumout           ;
+; |Calculadora|Sumador:suma|Add0~29                                                           ; |Calculadora|Sumador:suma|Add0~30                                                                     ; cout             ;
+; |Calculadora|Restador:resta|r[7]~29                                                         ; |Calculadora|Restador:resta|r[7]~29                                                                   ; sumout           ;
+; |Calculadora|Restador:resta|r[7]~29                                                         ; |Calculadora|Restador:resta|r[7]~30                                                                   ; cout             ;
+; |Calculadora|Restador:resta|r[7]~29                                                         ; |Calculadora|Restador:resta|r[7]~31                                                                   ; shareout         ;
+; |Calculadora|Sumador:suma|Add0~33                                                           ; |Calculadora|Sumador:suma|Add0~33                                                                     ; sumout           ;
+; |Calculadora|Restador:resta|r[8]~33                                                         ; |Calculadora|Restador:resta|r[8]~33                                                                   ; sumout           ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2           ; dataout2         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT1  ; dataout3         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT2  ; dataout4         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT3  ; dataout5         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT4  ; dataout6         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT5  ; dataout7         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT6  ; dataout8         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT7  ; dataout9         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT8  ; dataout10        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT9  ; dataout11        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT10 ; dataout12        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT11 ; dataout13        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT12 ; dataout14        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT13 ; dataout15        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT14 ; dataout16        ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT15 ; dataout17        ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[3]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[3]                                         ; regout           ;
+; |Calculadora|Salida:salir|salida[0]~96                                                      ; |Calculadora|Salida:salir|salida[0]~96                                                                ; combout          ;
+; |Calculadora|Salida:salir|salida[1]~97                                                      ; |Calculadora|Salida:salir|salida[1]~97                                                                ; combout          ;
+; |Calculadora|Salida:salir|salida[2]~98                                                      ; |Calculadora|Salida:salir|salida[2]~98                                                                ; combout          ;
+; |Calculadora|Salida:salir|salida[3]~99                                                      ; |Calculadora|Salida:salir|salida[3]~99                                                                ; combout          ;
+; |Calculadora|Salida:salir|salida[4]~100                                                     ; |Calculadora|Salida:salir|salida[4]~100                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[5]~101                                                     ; |Calculadora|Salida:salir|salida[5]~101                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[6]~102                                                     ; |Calculadora|Salida:salir|salida[6]~102                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[7]~103                                                     ; |Calculadora|Salida:salir|salida[7]~103                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[8]~104                                                     ; |Calculadora|Salida:salir|salida[8]~104                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[9]~105                                                     ; |Calculadora|Salida:salir|salida[9]~105                                                               ; combout          ;
+; |Calculadora|Salida:salir|salida[10]~106                                                    ; |Calculadora|Salida:salir|salida[10]~106                                                              ; combout          ;
+; |Calculadora|Salida:salir|salida[11]~107                                                    ; |Calculadora|Salida:salir|salida[11]~107                                                              ; combout          ;
+; |Calculadora|Salida:salir|salida[12]~108                                                    ; |Calculadora|Salida:salir|salida[12]~108                                                              ; combout          ;
+; |Calculadora|Salida:salir|salida[13]~109                                                    ; |Calculadora|Salida:salir|salida[13]~109                                                              ; combout          ;
+; |Calculadora|Salida:salir|salida[14]~110                                                    ; |Calculadora|Salida:salir|salida[14]~110                                                              ; combout          ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[0]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[0]                                         ; regout           ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~15                               ; |Calculadora|Calculadora_controller:maquina_estados|estado~15                                         ; combout          ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~14                               ; |Calculadora|Calculadora_controller:maquina_estados|estado~14                                         ; combout          ;
+; |Calculadora|Counter:contador|temp[3]                                                       ; |Calculadora|Counter:contador|temp[3]                                                                 ; regout           ;
+; |Calculadora|Counter:contador|Mux3~0                                                        ; |Calculadora|Counter:contador|Mux3~0                                                                  ; combout          ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~2                                ; |Calculadora|Calculadora_controller:maquina_estados|estado~2                                          ; combout          ;
+; |Calculadora|Counter:contador|temp~5                                                        ; |Calculadora|Counter:contador|temp~5                                                                  ; combout          ;
+; |Calculadora|Counter:contador|temp~7                                                        ; |Calculadora|Counter:contador|temp~7                                                                  ; combout          ;
+; |Calculadora|respuesta[0]                                                                   ; |Calculadora|respuesta[0]                                                                             ; padio            ;
+; |Calculadora|respuesta[1]                                                                   ; |Calculadora|respuesta[1]                                                                             ; padio            ;
+; |Calculadora|respuesta[2]                                                                   ; |Calculadora|respuesta[2]                                                                             ; padio            ;
+; |Calculadora|respuesta[3]                                                                   ; |Calculadora|respuesta[3]                                                                             ; padio            ;
+; |Calculadora|respuesta[4]                                                                   ; |Calculadora|respuesta[4]                                                                             ; padio            ;
+; |Calculadora|respuesta[5]                                                                   ; |Calculadora|respuesta[5]                                                                             ; padio            ;
+; |Calculadora|respuesta[6]                                                                   ; |Calculadora|respuesta[6]                                                                             ; padio            ;
+; |Calculadora|respuesta[7]                                                                   ; |Calculadora|respuesta[7]                                                                             ; padio            ;
+; |Calculadora|respuesta[8]                                                                   ; |Calculadora|respuesta[8]                                                                             ; padio            ;
+; |Calculadora|respuesta[9]                                                                   ; |Calculadora|respuesta[9]                                                                             ; padio            ;
+; |Calculadora|respuesta[10]                                                                  ; |Calculadora|respuesta[10]                                                                            ; padio            ;
+; |Calculadora|respuesta[11]                                                                  ; |Calculadora|respuesta[11]                                                                            ; padio            ;
+; |Calculadora|respuesta[12]                                                                  ; |Calculadora|respuesta[12]                                                                            ; padio            ;
+; |Calculadora|respuesta[13]                                                                  ; |Calculadora|respuesta[13]                                                                            ; padio            ;
+; |Calculadora|respuesta[14]                                                                  ; |Calculadora|respuesta[14]                                                                            ; padio            ;
+; |Calculadora|b[0]                                                                           ; |Calculadora|b[0]~corein                                                                              ; combout          ;
+; |Calculadora|a[0]                                                                           ; |Calculadora|a[0]~corein                                                                              ; combout          ;
+; |Calculadora|b[1]                                                                           ; |Calculadora|b[1]~corein                                                                              ; combout          ;
+; |Calculadora|a[1]                                                                           ; |Calculadora|a[1]~corein                                                                              ; combout          ;
+; |Calculadora|b[2]                                                                           ; |Calculadora|b[2]~corein                                                                              ; combout          ;
+; |Calculadora|a[2]                                                                           ; |Calculadora|a[2]~corein                                                                              ; combout          ;
+; |Calculadora|b[3]                                                                           ; |Calculadora|b[3]~corein                                                                              ; combout          ;
+; |Calculadora|a[3]                                                                           ; |Calculadora|a[3]~corein                                                                              ; combout          ;
+; |Calculadora|b[4]                                                                           ; |Calculadora|b[4]~corein                                                                              ; combout          ;
+; |Calculadora|a[4]                                                                           ; |Calculadora|a[4]~corein                                                                              ; combout          ;
+; |Calculadora|b[5]                                                                           ; |Calculadora|b[5]~corein                                                                              ; combout          ;
+; |Calculadora|a[5]                                                                           ; |Calculadora|a[5]~corein                                                                              ; combout          ;
+; |Calculadora|b[6]                                                                           ; |Calculadora|b[6]~corein                                                                              ; combout          ;
+; |Calculadora|a[6]                                                                           ; |Calculadora|a[6]~corein                                                                              ; combout          ;
+; |Calculadora|b[7]                                                                           ; |Calculadora|b[7]~corein                                                                              ; combout          ;
+; |Calculadora|a[7]                                                                           ; |Calculadora|a[7]~corein                                                                              ; combout          ;
+; |Calculadora|Operacion[0]                                                                   ; |Calculadora|Operacion[0]~corein                                                                      ; combout          ;
+; |Calculadora|igual                                                                          ; |Calculadora|igual~corein                                                                             ; combout          ;
+; |Calculadora|Operacion[1]                                                                   ; |Calculadora|Operacion[1]~corein                                                                      ; combout          ;
+; |Calculadora|clock                                                                          ; |Calculadora|clock~corein                                                                             ; combout          ;
+; |Calculadora|reset                                                                          ; |Calculadora|reset~corein                                                                             ; combout          ;
+; |Calculadora|clock~clkctrl                                                                  ; |Calculadora|clock~clkctrl                                                                            ; outclk           ;
+; |Calculadora|reset~clkctrl                                                                  ; |Calculadora|reset~clkctrl                                                                            ; outclk           ;
++---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                       ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                   ; Output Port Name                                                                              ; Output Port Type ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |Calculadora|Restador:resta|r[0]~1                                                          ; |Calculadora|Restador:resta|r[0]~2                                                            ; cout             ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~2 ; dataout0         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~3 ; dataout1         ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[1]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[1]                                 ; regout           ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[2]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[2]                                 ; regout           ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~5                                ; |Calculadora|Calculadora_controller:maquina_estados|estado~5                                  ; combout          ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~9                                ; |Calculadora|Calculadora_controller:maquina_estados|estado~9                                  ; combout          ;
+; |Calculadora|Counter:contador|temp[1]                                                       ; |Calculadora|Counter:contador|temp[1]                                                         ; regout           ;
+; |Calculadora|Counter:contador|temp[0]                                                       ; |Calculadora|Counter:contador|temp[0]                                                         ; regout           ;
+; |Calculadora|Counter:contador|temp[2]                                                       ; |Calculadora|Counter:contador|temp[2]                                                         ; regout           ;
+; |Calculadora|Counter:contador|Mux2~0                                                        ; |Calculadora|Counter:contador|Mux2~0                                                          ; combout          ;
+; |Calculadora|Counter:contador|temp~4                                                        ; |Calculadora|Counter:contador|temp~4                                                          ; combout          ;
+; |Calculadora|Counter:contador|temp~6                                                        ; |Calculadora|Counter:contador|temp~6                                                          ; combout          ;
+; |Calculadora|Counter:contador|T0                                                            ; |Calculadora|Counter:contador|T0                                                              ; combout          ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                       ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                   ; Output Port Name                                                                              ; Output Port Type ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |Calculadora|Restador:resta|r[0]~1                                                          ; |Calculadora|Restador:resta|r[0]~2                                                            ; cout             ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~2 ; dataout0         ;
+; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2 ; |Calculadora|Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~3 ; dataout1         ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[1]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[1]                                 ; regout           ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado[2]                               ; |Calculadora|Calculadora_controller:maquina_estados|estado[2]                                 ; regout           ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~5                                ; |Calculadora|Calculadora_controller:maquina_estados|estado~5                                  ; combout          ;
+; |Calculadora|Calculadora_controller:maquina_estados|estado~9                                ; |Calculadora|Calculadora_controller:maquina_estados|estado~9                                  ; combout          ;
+; |Calculadora|Counter:contador|temp[1]                                                       ; |Calculadora|Counter:contador|temp[1]                                                         ; regout           ;
+; |Calculadora|Counter:contador|temp[0]                                                       ; |Calculadora|Counter:contador|temp[0]                                                         ; regout           ;
+; |Calculadora|Counter:contador|temp[2]                                                       ; |Calculadora|Counter:contador|temp[2]                                                         ; regout           ;
+; |Calculadora|Counter:contador|Mux2~0                                                        ; |Calculadora|Counter:contador|Mux2~0                                                          ; combout          ;
+; |Calculadora|Counter:contador|temp~4                                                        ; |Calculadora|Counter:contador|temp~4                                                          ; combout          ;
+; |Calculadora|Counter:contador|temp~6                                                        ; |Calculadora|Counter:contador|temp~6                                                          ; combout          ;
++---------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Tue Apr 12 19:06:17 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
+Info: Using vector source file "C:/Users/estudiante.11A503E42117145/Documents/fabi/calculadora/Calculadora.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |Calculadora|Calculadora_controller:maquina_estados|estado[0]
+    Info: Register: |Calculadora|Counter:contador|temp[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      90.54 %
+Info: Number of transitions in simulation is 9472
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Tue Apr 12 19:06:54 2016
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:00
+
+

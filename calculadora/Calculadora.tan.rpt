@@ -1,0 +1,537 @@
+Classic Timing Analyzer report for Calculadora
+Tue Apr 12 18:58:24 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                             ; To                                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.125 ns                                       ; igual                                            ; Calculadora_controller:maquina_estados|estado[2] ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.410 ns                                       ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[7]                                     ; clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 14.829 ns                                      ; b[5]                                             ; respuesta[7]                                     ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.329 ns                                      ; Operacion[0]                                     ; Calculadora_controller:maquina_estados|estado[3] ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|T0                              ; Calculadora_controller:maquina_estados|estado[2] ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                  ;                                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                     ;
++-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                             ; To                                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|T0                              ; Calculadora_controller:maquina_estados|estado[0] ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|T0                              ; Calculadora_controller:maquina_estados|estado[2] ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|T0                              ; Calculadora_controller:maquina_estados|estado[1] ; clock      ; clock    ; None                        ; None                      ; 0.453 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|T0                              ; Calculadora_controller:maquina_estados|estado[3] ; clock      ; clock    ; None                        ; None                      ; 0.453 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[1]                         ; Counter:contador|temp[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.454 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[0]                         ; Counter:contador|temp[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[2]                         ; Counter:contador|temp[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.260 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[3]                         ; Counter:contador|T0                              ; clock      ; clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Calculadora_controller:maquina_estados|estado[2] ; clock      ; clock    ; None                        ; None                      ; 1.037 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Calculadora_controller:maquina_estados|estado[1] ; clock      ; clock    ; None                        ; None                      ; 1.035 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[3]                         ; Counter:contador|temp[2]                         ; clock      ; clock    ; None                        ; None                      ; 1.003 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[1]                         ; Counter:contador|temp[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.940 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[1]                         ; Counter:contador|temp[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.939 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[1] ; Calculadora_controller:maquina_estados|estado[0] ; clock      ; clock    ; None                        ; None                      ; 0.937 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[3]                         ; Counter:contador|temp[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.934 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Calculadora_controller:maquina_estados|estado[3] ; clock      ; clock    ; None                        ; None                      ; 0.923 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[0]                         ; Counter:contador|temp[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.867 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[0]                         ; Counter:contador|temp[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.864 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[2]                         ; Counter:contador|T0                              ; clock      ; clock    ; None                        ; None                      ; 1.023 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[0]                         ; Counter:contador|T0                              ; clock      ; clock    ; None                        ; None                      ; 1.015 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[1]                         ; Counter:contador|T0                              ; clock      ; clock    ; None                        ; None                      ; 0.971 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[3]                         ; Counter:contador|temp[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[2]                         ; Counter:contador|temp[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.745 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[2]                         ; Counter:contador|temp[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.740 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[2]                         ; Counter:contador|temp[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.738 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Counter:contador|temp[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.991 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Counter:contador|temp[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.991 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Counter:contador|temp[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.991 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Counter:contador|temp[2]                         ; clock      ; clock    ; None                        ; None                      ; 0.991 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[1] ; Calculadora_controller:maquina_estados|estado[1] ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[0] ; Calculadora_controller:maquina_estados|estado[0] ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[3]                         ; Counter:contador|temp[3]                         ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[0]                         ; Counter:contador|temp[0]                         ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Counter:contador|temp[1]                         ; Counter:contador|temp[1]                         ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[2] ; Calculadora_controller:maquina_estados|estado[2] ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; Calculadora_controller:maquina_estados|estado[3] ; Calculadora_controller:maquina_estados|estado[3] ; clock      ; clock    ; None                        ; None                      ; 0.488 ns                ;
++-------+------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                            ;
++-------+--------------+------------+--------------+--------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From         ; To                                               ; To Clock ;
++-------+--------------+------------+--------------+--------------------------------------------------+----------+
+; N/A   ; None         ; 4.125 ns   ; igual        ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
+; N/A   ; None         ; 4.123 ns   ; igual        ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A   ; None         ; 4.011 ns   ; igual        ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
+; N/A   ; None         ; 3.694 ns   ; igual        ; Calculadora_controller:maquina_estados|estado[0] ; clock    ;
+; N/A   ; None         ; 3.600 ns   ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
+; N/A   ; None         ; 3.600 ns   ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
+; N/A   ; None         ; 3.599 ns   ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A   ; None         ; 3.569 ns   ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A   ; None         ; 3.568 ns   ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
+; N/A   ; None         ; 3.568 ns   ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
++-------+--------------+------------+--------------+--------------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                               ;
++-------+--------------+------------+--------------------------------------------------+---------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                             ; To            ; From Clock ;
++-------+--------------+------------+--------------------------------------------------+---------------+------------+
+; N/A   ; None         ; 9.410 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[7]  ; clock      ;
+; N/A   ; None         ; 8.939 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[5]  ; clock      ;
+; N/A   ; None         ; 8.666 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[7]  ; clock      ;
+; N/A   ; None         ; 8.587 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[11] ; clock      ;
+; N/A   ; None         ; 8.573 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[12] ; clock      ;
+; N/A   ; None         ; 8.531 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[7]  ; clock      ;
+; N/A   ; None         ; 8.440 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[6]  ; clock      ;
+; N/A   ; None         ; 8.240 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[11] ; clock      ;
+; N/A   ; None         ; 8.235 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[14] ; clock      ;
+; N/A   ; None         ; 8.230 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[3]  ; clock      ;
+; N/A   ; None         ; 8.225 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[12] ; clock      ;
+; N/A   ; None         ; 8.158 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[5]  ; clock      ;
+; N/A   ; None         ; 8.076 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[11] ; clock      ;
+; N/A   ; None         ; 8.061 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[12] ; clock      ;
+; N/A   ; None         ; 8.060 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[6]  ; clock      ;
+; N/A   ; None         ; 7.959 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[13] ; clock      ;
+; N/A   ; None         ; 7.958 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[6]  ; clock      ;
+; N/A   ; None         ; 7.918 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[5]  ; clock      ;
+; N/A   ; None         ; 7.904 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[4]  ; clock      ;
+; N/A   ; None         ; 7.818 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[1]  ; clock      ;
+; N/A   ; None         ; 7.800 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[1]  ; clock      ;
+; N/A   ; None         ; 7.732 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[9]  ; clock      ;
+; N/A   ; None         ; 7.685 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[1]  ; clock      ;
+; N/A   ; None         ; 7.612 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[13] ; clock      ;
+; N/A   ; None         ; 7.551 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[4]  ; clock      ;
+; N/A   ; None         ; 7.479 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[14] ; clock      ;
+; N/A   ; None         ; 7.477 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[2]  ; clock      ;
+; N/A   ; None         ; 7.469 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[3]  ; clock      ;
+; N/A   ; None         ; 7.448 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[13] ; clock      ;
+; N/A   ; None         ; 7.342 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[14] ; clock      ;
+; N/A   ; None         ; 7.333 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[3]  ; clock      ;
+; N/A   ; None         ; 7.323 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[4]  ; clock      ;
+; N/A   ; None         ; 7.255 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[9]  ; clock      ;
+; N/A   ; None         ; 7.217 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[9]  ; clock      ;
+; N/A   ; None         ; 7.195 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[10] ; clock      ;
+; N/A   ; None         ; 7.173 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[2]  ; clock      ;
+; N/A   ; None         ; 7.166 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[8]  ; clock      ;
+; N/A   ; None         ; 6.998 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[2]  ; clock      ;
+; N/A   ; None         ; 6.923 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[0]  ; clock      ;
+; N/A   ; None         ; 6.912 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[0]  ; clock      ;
+; N/A   ; None         ; 6.877 ns   ; Calculadora_controller:maquina_estados|estado[3] ; respuesta[0]  ; clock      ;
+; N/A   ; None         ; 6.847 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[10] ; clock      ;
+; N/A   ; None         ; 6.690 ns   ; Calculadora_controller:maquina_estados|estado[2] ; respuesta[8]  ; clock      ;
+; N/A   ; None         ; 6.683 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[10] ; clock      ;
+; N/A   ; None         ; 6.652 ns   ; Calculadora_controller:maquina_estados|estado[1] ; respuesta[8]  ; clock      ;
++-------+--------------+------------+--------------------------------------------------+---------------+------------+
+
+
++--------------------------------------------------------------------+
+; tpd                                                                ;
++-------+-------------------+-----------------+------+---------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To            ;
++-------+-------------------+-----------------+------+---------------+
+; N/A   ; None              ; 14.829 ns       ; b[5] ; respuesta[7]  ;
+; N/A   ; None              ; 14.536 ns       ; b[1] ; respuesta[1]  ;
+; N/A   ; None              ; 14.514 ns       ; b[5] ; respuesta[6]  ;
+; N/A   ; None              ; 14.484 ns       ; b[5] ; respuesta[5]  ;
+; N/A   ; None              ; 14.399 ns       ; a[1] ; respuesta[1]  ;
+; N/A   ; None              ; 14.116 ns       ; a[7] ; respuesta[7]  ;
+; N/A   ; None              ; 14.105 ns       ; b[6] ; respuesta[7]  ;
+; N/A   ; None              ; 14.099 ns       ; a[5] ; respuesta[7]  ;
+; N/A   ; None              ; 14.075 ns       ; b[4] ; respuesta[7]  ;
+; N/A   ; None              ; 14.060 ns       ; a[3] ; respuesta[7]  ;
+; N/A   ; None              ; 14.023 ns       ; b[0] ; respuesta[1]  ;
+; N/A   ; None              ; 13.980 ns       ; b[1] ; respuesta[7]  ;
+; N/A   ; None              ; 13.951 ns       ; b[5] ; respuesta[12] ;
+; N/A   ; None              ; 13.930 ns       ; b[5] ; respuesta[11] ;
+; N/A   ; None              ; 13.882 ns       ; a[0] ; respuesta[1]  ;
+; N/A   ; None              ; 13.843 ns       ; a[1] ; respuesta[7]  ;
+; N/A   ; None              ; 13.795 ns       ; a[2] ; respuesta[7]  ;
+; N/A   ; None              ; 13.790 ns       ; b[6] ; respuesta[6]  ;
+; N/A   ; None              ; 13.784 ns       ; b[3] ; respuesta[7]  ;
+; N/A   ; None              ; 13.784 ns       ; a[5] ; respuesta[6]  ;
+; N/A   ; None              ; 13.760 ns       ; b[4] ; respuesta[6]  ;
+; N/A   ; None              ; 13.754 ns       ; a[5] ; respuesta[5]  ;
+; N/A   ; None              ; 13.745 ns       ; a[3] ; respuesta[6]  ;
+; N/A   ; None              ; 13.743 ns       ; b[7] ; respuesta[7]  ;
+; N/A   ; None              ; 13.730 ns       ; b[4] ; respuesta[5]  ;
+; N/A   ; None              ; 13.715 ns       ; a[3] ; respuesta[5]  ;
+; N/A   ; None              ; 13.688 ns       ; b[5] ; respuesta[14] ;
+; N/A   ; None              ; 13.666 ns       ; b[2] ; respuesta[7]  ;
+; N/A   ; None              ; 13.665 ns       ; b[1] ; respuesta[6]  ;
+; N/A   ; None              ; 13.635 ns       ; b[1] ; respuesta[5]  ;
+; N/A   ; None              ; 13.528 ns       ; a[1] ; respuesta[6]  ;
+; N/A   ; None              ; 13.516 ns       ; a[6] ; respuesta[7]  ;
+; N/A   ; None              ; 13.508 ns       ; b[4] ; respuesta[4]  ;
+; N/A   ; None              ; 13.502 ns       ; b[5] ; respuesta[13] ;
+; N/A   ; None              ; 13.498 ns       ; a[1] ; respuesta[5]  ;
+; N/A   ; None              ; 13.493 ns       ; a[3] ; respuesta[4]  ;
+; N/A   ; None              ; 13.480 ns       ; a[2] ; respuesta[6]  ;
+; N/A   ; None              ; 13.469 ns       ; b[3] ; respuesta[6]  ;
+; N/A   ; None              ; 13.467 ns       ; b[0] ; respuesta[7]  ;
+; N/A   ; None              ; 13.450 ns       ; a[2] ; respuesta[5]  ;
+; N/A   ; None              ; 13.439 ns       ; b[3] ; respuesta[5]  ;
+; N/A   ; None              ; 13.413 ns       ; b[1] ; respuesta[4]  ;
+; N/A   ; None              ; 13.351 ns       ; b[2] ; respuesta[6]  ;
+; N/A   ; None              ; 13.326 ns       ; a[0] ; respuesta[7]  ;
+; N/A   ; None              ; 13.321 ns       ; b[2] ; respuesta[5]  ;
+; N/A   ; None              ; 13.305 ns       ; a[4] ; respuesta[7]  ;
+; N/A   ; None              ; 13.276 ns       ; a[1] ; respuesta[4]  ;
+; N/A   ; None              ; 13.238 ns       ; a[7] ; respuesta[12] ;
+; N/A   ; None              ; 13.228 ns       ; a[2] ; respuesta[4]  ;
+; N/A   ; None              ; 13.227 ns       ; b[6] ; respuesta[12] ;
+; N/A   ; None              ; 13.221 ns       ; a[5] ; respuesta[12] ;
+; N/A   ; None              ; 13.217 ns       ; a[7] ; respuesta[11] ;
+; N/A   ; None              ; 13.217 ns       ; b[3] ; respuesta[4]  ;
+; N/A   ; None              ; 13.206 ns       ; b[6] ; respuesta[11] ;
+; N/A   ; None              ; 13.201 ns       ; a[6] ; respuesta[6]  ;
+; N/A   ; None              ; 13.200 ns       ; a[5] ; respuesta[11] ;
+; N/A   ; None              ; 13.197 ns       ; b[4] ; respuesta[12] ;
+; N/A   ; None              ; 13.182 ns       ; a[3] ; respuesta[12] ;
+; N/A   ; None              ; 13.176 ns       ; b[4] ; respuesta[11] ;
+; N/A   ; None              ; 13.161 ns       ; a[3] ; respuesta[11] ;
+; N/A   ; None              ; 13.152 ns       ; b[0] ; respuesta[6]  ;
+; N/A   ; None              ; 13.122 ns       ; b[0] ; respuesta[5]  ;
+; N/A   ; None              ; 13.111 ns       ; b[5] ; respuesta[9]  ;
+; N/A   ; None              ; 13.102 ns       ; b[1] ; respuesta[12] ;
+; N/A   ; None              ; 13.099 ns       ; b[2] ; respuesta[4]  ;
+; N/A   ; None              ; 13.081 ns       ; b[1] ; respuesta[11] ;
+; N/A   ; None              ; 13.011 ns       ; a[0] ; respuesta[6]  ;
+; N/A   ; None              ; 12.990 ns       ; a[4] ; respuesta[6]  ;
+; N/A   ; None              ; 12.981 ns       ; a[0] ; respuesta[5]  ;
+; N/A   ; None              ; 12.975 ns       ; a[7] ; respuesta[14] ;
+; N/A   ; None              ; 12.965 ns       ; a[1] ; respuesta[12] ;
+; N/A   ; None              ; 12.964 ns       ; b[6] ; respuesta[14] ;
+; N/A   ; None              ; 12.960 ns       ; a[4] ; respuesta[5]  ;
+; N/A   ; None              ; 12.958 ns       ; a[5] ; respuesta[14] ;
+; N/A   ; None              ; 12.944 ns       ; a[1] ; respuesta[11] ;
+; N/A   ; None              ; 12.934 ns       ; b[4] ; respuesta[14] ;
+; N/A   ; None              ; 12.919 ns       ; a[3] ; respuesta[14] ;
+; N/A   ; None              ; 12.917 ns       ; a[2] ; respuesta[12] ;
+; N/A   ; None              ; 12.906 ns       ; b[3] ; respuesta[12] ;
+; N/A   ; None              ; 12.900 ns       ; b[0] ; respuesta[4]  ;
+; N/A   ; None              ; 12.896 ns       ; a[2] ; respuesta[11] ;
+; N/A   ; None              ; 12.885 ns       ; b[3] ; respuesta[11] ;
+; N/A   ; None              ; 12.880 ns       ; a[3] ; respuesta[3]  ;
+; N/A   ; None              ; 12.865 ns       ; b[7] ; respuesta[12] ;
+; N/A   ; None              ; 12.844 ns       ; b[7] ; respuesta[11] ;
+; N/A   ; None              ; 12.839 ns       ; b[1] ; respuesta[14] ;
+; N/A   ; None              ; 12.800 ns       ; b[1] ; respuesta[3]  ;
+; N/A   ; None              ; 12.789 ns       ; a[7] ; respuesta[13] ;
+; N/A   ; None              ; 12.788 ns       ; b[2] ; respuesta[12] ;
+; N/A   ; None              ; 12.788 ns       ; b[0] ; respuesta[0]  ;
+; N/A   ; None              ; 12.778 ns       ; b[6] ; respuesta[13] ;
+; N/A   ; None              ; 12.772 ns       ; a[5] ; respuesta[13] ;
+; N/A   ; None              ; 12.767 ns       ; b[2] ; respuesta[11] ;
+; N/A   ; None              ; 12.759 ns       ; a[0] ; respuesta[4]  ;
+; N/A   ; None              ; 12.748 ns       ; b[4] ; respuesta[13] ;
+; N/A   ; None              ; 12.738 ns       ; a[4] ; respuesta[4]  ;
+; N/A   ; None              ; 12.733 ns       ; a[3] ; respuesta[13] ;
+; N/A   ; None              ; 12.702 ns       ; a[1] ; respuesta[14] ;
+; N/A   ; None              ; 12.663 ns       ; a[1] ; respuesta[3]  ;
+; N/A   ; None              ; 12.654 ns       ; a[2] ; respuesta[14] ;
+; N/A   ; None              ; 12.653 ns       ; b[1] ; respuesta[13] ;
+; N/A   ; None              ; 12.647 ns       ; a[0] ; respuesta[0]  ;
+; N/A   ; None              ; 12.643 ns       ; b[3] ; respuesta[14] ;
+; N/A   ; None              ; 12.638 ns       ; a[6] ; respuesta[12] ;
+; N/A   ; None              ; 12.617 ns       ; a[6] ; respuesta[11] ;
+; N/A   ; None              ; 12.615 ns       ; a[2] ; respuesta[3]  ;
+; N/A   ; None              ; 12.604 ns       ; b[3] ; respuesta[3]  ;
+; N/A   ; None              ; 12.602 ns       ; b[7] ; respuesta[14] ;
+; N/A   ; None              ; 12.589 ns       ; b[0] ; respuesta[12] ;
+; N/A   ; None              ; 12.568 ns       ; b[0] ; respuesta[11] ;
+; N/A   ; None              ; 12.563 ns       ; b[5] ; respuesta[8]  ;
+; N/A   ; None              ; 12.528 ns       ; b[5] ; respuesta[10] ;
+; N/A   ; None              ; 12.525 ns       ; b[2] ; respuesta[14] ;
+; N/A   ; None              ; 12.516 ns       ; a[1] ; respuesta[13] ;
+; N/A   ; None              ; 12.486 ns       ; b[2] ; respuesta[3]  ;
+; N/A   ; None              ; 12.468 ns       ; a[2] ; respuesta[13] ;
+; N/A   ; None              ; 12.457 ns       ; b[3] ; respuesta[13] ;
+; N/A   ; None              ; 12.448 ns       ; a[0] ; respuesta[12] ;
+; N/A   ; None              ; 12.427 ns       ; a[4] ; respuesta[12] ;
+; N/A   ; None              ; 12.427 ns       ; a[0] ; respuesta[11] ;
+; N/A   ; None              ; 12.416 ns       ; b[7] ; respuesta[13] ;
+; N/A   ; None              ; 12.406 ns       ; a[4] ; respuesta[11] ;
+; N/A   ; None              ; 12.398 ns       ; a[7] ; respuesta[9]  ;
+; N/A   ; None              ; 12.387 ns       ; b[6] ; respuesta[9]  ;
+; N/A   ; None              ; 12.381 ns       ; a[5] ; respuesta[9]  ;
+; N/A   ; None              ; 12.375 ns       ; a[6] ; respuesta[14] ;
+; N/A   ; None              ; 12.357 ns       ; b[4] ; respuesta[9]  ;
+; N/A   ; None              ; 12.342 ns       ; a[3] ; respuesta[9]  ;
+; N/A   ; None              ; 12.339 ns       ; b[2] ; respuesta[13] ;
+; N/A   ; None              ; 12.326 ns       ; b[0] ; respuesta[14] ;
+; N/A   ; None              ; 12.287 ns       ; b[0] ; respuesta[3]  ;
+; N/A   ; None              ; 12.287 ns       ; b[1] ; respuesta[2]  ;
+; N/A   ; None              ; 12.262 ns       ; b[1] ; respuesta[9]  ;
+; N/A   ; None              ; 12.189 ns       ; a[6] ; respuesta[13] ;
+; N/A   ; None              ; 12.185 ns       ; a[0] ; respuesta[14] ;
+; N/A   ; None              ; 12.164 ns       ; a[4] ; respuesta[14] ;
+; N/A   ; None              ; 12.150 ns       ; a[1] ; respuesta[2]  ;
+; N/A   ; None              ; 12.146 ns       ; a[0] ; respuesta[3]  ;
+; N/A   ; None              ; 12.140 ns       ; b[0] ; respuesta[13] ;
+; N/A   ; None              ; 12.125 ns       ; a[1] ; respuesta[9]  ;
+; N/A   ; None              ; 12.102 ns       ; a[2] ; respuesta[2]  ;
+; N/A   ; None              ; 12.077 ns       ; a[2] ; respuesta[9]  ;
+; N/A   ; None              ; 12.066 ns       ; b[3] ; respuesta[9]  ;
+; N/A   ; None              ; 12.025 ns       ; b[7] ; respuesta[9]  ;
+; N/A   ; None              ; 11.999 ns       ; a[0] ; respuesta[13] ;
+; N/A   ; None              ; 11.978 ns       ; a[4] ; respuesta[13] ;
+; N/A   ; None              ; 11.973 ns       ; b[2] ; respuesta[2]  ;
+; N/A   ; None              ; 11.948 ns       ; b[2] ; respuesta[9]  ;
+; N/A   ; None              ; 11.850 ns       ; a[7] ; respuesta[8]  ;
+; N/A   ; None              ; 11.839 ns       ; b[6] ; respuesta[8]  ;
+; N/A   ; None              ; 11.833 ns       ; a[5] ; respuesta[8]  ;
+; N/A   ; None              ; 11.815 ns       ; a[7] ; respuesta[10] ;
+; N/A   ; None              ; 11.809 ns       ; b[4] ; respuesta[8]  ;
+; N/A   ; None              ; 11.804 ns       ; b[6] ; respuesta[10] ;
+; N/A   ; None              ; 11.798 ns       ; a[5] ; respuesta[10] ;
+; N/A   ; None              ; 11.798 ns       ; a[6] ; respuesta[9]  ;
+; N/A   ; None              ; 11.794 ns       ; a[3] ; respuesta[8]  ;
+; N/A   ; None              ; 11.774 ns       ; b[4] ; respuesta[10] ;
+; N/A   ; None              ; 11.774 ns       ; b[0] ; respuesta[2]  ;
+; N/A   ; None              ; 11.759 ns       ; a[3] ; respuesta[10] ;
+; N/A   ; None              ; 11.749 ns       ; b[0] ; respuesta[9]  ;
+; N/A   ; None              ; 11.714 ns       ; b[1] ; respuesta[8]  ;
+; N/A   ; None              ; 11.679 ns       ; b[1] ; respuesta[10] ;
+; N/A   ; None              ; 11.633 ns       ; a[0] ; respuesta[2]  ;
+; N/A   ; None              ; 11.608 ns       ; a[0] ; respuesta[9]  ;
+; N/A   ; None              ; 11.587 ns       ; a[4] ; respuesta[9]  ;
+; N/A   ; None              ; 11.577 ns       ; a[1] ; respuesta[8]  ;
+; N/A   ; None              ; 11.542 ns       ; a[1] ; respuesta[10] ;
+; N/A   ; None              ; 11.529 ns       ; a[2] ; respuesta[8]  ;
+; N/A   ; None              ; 11.518 ns       ; b[3] ; respuesta[8]  ;
+; N/A   ; None              ; 11.494 ns       ; a[2] ; respuesta[10] ;
+; N/A   ; None              ; 11.483 ns       ; b[3] ; respuesta[10] ;
+; N/A   ; None              ; 11.477 ns       ; b[7] ; respuesta[8]  ;
+; N/A   ; None              ; 11.442 ns       ; b[7] ; respuesta[10] ;
+; N/A   ; None              ; 11.400 ns       ; b[2] ; respuesta[8]  ;
+; N/A   ; None              ; 11.365 ns       ; b[2] ; respuesta[10] ;
+; N/A   ; None              ; 11.250 ns       ; a[6] ; respuesta[8]  ;
+; N/A   ; None              ; 11.215 ns       ; a[6] ; respuesta[10] ;
+; N/A   ; None              ; 11.201 ns       ; b[0] ; respuesta[8]  ;
+; N/A   ; None              ; 11.166 ns       ; b[0] ; respuesta[10] ;
+; N/A   ; None              ; 11.060 ns       ; a[0] ; respuesta[8]  ;
+; N/A   ; None              ; 11.039 ns       ; a[4] ; respuesta[8]  ;
+; N/A   ; None              ; 11.025 ns       ; a[0] ; respuesta[10] ;
+; N/A   ; None              ; 11.004 ns       ; a[4] ; respuesta[10] ;
++-------+-------------------+-----------------+------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                   ;
++---------------+-------------+-----------+--------------+--------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From         ; To                                               ; To Clock ;
++---------------+-------------+-----------+--------------+--------------------------------------------------+----------+
+; N/A           ; None        ; -3.329 ns ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
+; N/A           ; None        ; -3.329 ns ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
+; N/A           ; None        ; -3.330 ns ; Operacion[0] ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A           ; None        ; -3.360 ns ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A           ; None        ; -3.361 ns ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
+; N/A           ; None        ; -3.361 ns ; Operacion[1] ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
+; N/A           ; None        ; -3.455 ns ; igual        ; Calculadora_controller:maquina_estados|estado[0] ; clock    ;
+; N/A           ; None        ; -3.772 ns ; igual        ; Calculadora_controller:maquina_estados|estado[3] ; clock    ;
+; N/A           ; None        ; -3.884 ns ; igual        ; Calculadora_controller:maquina_estados|estado[1] ; clock    ;
+; N/A           ; None        ; -3.886 ns ; igual        ; Calculadora_controller:maquina_estados|estado[2] ; clock    ;
++---------------+-------------+-----------+--------------+--------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Tue Apr 12 18:58:06 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Calculadora -c Calculadora --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "Counter:contador|T0" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Warning: Found 5 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Counter:contador|temp[2]" as buffer
+    Info: Detected ripple clock "Counter:contador|temp[1]" as buffer
+    Info: Detected ripple clock "Counter:contador|temp[0]" as buffer
+    Info: Detected ripple clock "Counter:contador|temp[3]" as buffer
+    Info: Detected gated clock "Counter:contador|Mux3~0" as buffer
+Info: Clock "clock" Internal fmax is restricted to 500.0 MHz between source register "Counter:contador|T0" and destination register "Calculadora_controller:maquina_estados|estado[0]"
+    Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.454 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X13_Y15_N10; Fanout = 4; REG Node = 'Counter:contador|T0'
+            Info: 2: + IC(0.246 ns) + CELL(0.053 ns) = 0.299 ns; Loc. = LCCOMB_X13_Y15_N14; Fanout = 1; COMB Node = 'Calculadora_controller:maquina_estados|estado~2'
+            Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 0.454 ns; Loc. = LCFF_X13_Y15_N15; Fanout = 6; REG Node = 'Calculadora_controller:maquina_estados|estado[0]'
+            Info: Total cell delay = 0.208 ns ( 45.81 % )
+            Info: Total interconnect delay = 0.246 ns ( 54.19 % )
+        Info: - Smallest clock skew is -1.439 ns
+            Info: + Shortest clock path from clock "clock" to destination register is 2.459 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clock'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+                Info: 3: + IC(0.644 ns) + CELL(0.618 ns) = 2.459 ns; Loc. = LCFF_X13_Y15_N15; Fanout = 6; REG Node = 'Calculadora_controller:maquina_estados|estado[0]'
+                Info: Total cell delay = 1.472 ns ( 59.86 % )
+                Info: Total interconnect delay = 0.987 ns ( 40.14 % )
+            Info: - Longest clock path from clock "clock" to source register is 3.898 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clock'
+                Info: 2: + IC(1.424 ns) + CELL(0.712 ns) = 2.990 ns; Loc. = LCFF_X13_Y15_N27; Fanout = 5; REG Node = 'Counter:contador|temp[1]'
+                Info: 3: + IC(0.279 ns) + CELL(0.366 ns) = 3.635 ns; Loc. = LCCOMB_X13_Y15_N0; Fanout = 1; COMB Node = 'Counter:contador|Mux3~0'
+                Info: 4: + IC(0.210 ns) + CELL(0.053 ns) = 3.898 ns; Loc. = LCCOMB_X13_Y15_N10; Fanout = 4; REG Node = 'Counter:contador|T0'
+                Info: Total cell delay = 1.985 ns ( 50.92 % )
+                Info: Total interconnect delay = 1.913 ns ( 49.08 % )
+        Info: + Micro clock to output delay of source is 0.000 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "Calculadora_controller:maquina_estados|estado[2]" (data pin = "igual", clock pin = "clock") is 4.125 ns
+    Info: + Longest pin to register delay is 6.494 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.817 ns) = 0.817 ns; Loc. = PIN_T9; Fanout = 2; PIN Node = 'igual'
+        Info: 2: + IC(4.702 ns) + CELL(0.228 ns) = 5.747 ns; Loc. = LCCOMB_X13_Y15_N24; Fanout = 3; COMB Node = 'Calculadora_controller:maquina_estados|estado~15'
+        Info: 3: + IC(0.364 ns) + CELL(0.228 ns) = 6.339 ns; Loc. = LCCOMB_X13_Y15_N4; Fanout = 1; COMB Node = 'Calculadora_controller:maquina_estados|estado~9'
+        Info: 4: + IC(0.000 ns) + CELL(0.155 ns) = 6.494 ns; Loc. = LCFF_X13_Y15_N5; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[2]'
+        Info: Total cell delay = 1.428 ns ( 21.99 % )
+        Info: Total interconnect delay = 5.066 ns ( 78.01 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.459 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.644 ns) + CELL(0.618 ns) = 2.459 ns; Loc. = LCFF_X13_Y15_N5; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[2]'
+        Info: Total cell delay = 1.472 ns ( 59.86 % )
+        Info: Total interconnect delay = 0.987 ns ( 40.14 % )
+Info: tco from clock "clock" to destination pin "respuesta[7]" through register "Calculadora_controller:maquina_estados|estado[3]" is 9.410 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.459 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.644 ns) + CELL(0.618 ns) = 2.459 ns; Loc. = LCFF_X13_Y15_N7; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[3]'
+        Info: Total cell delay = 1.472 ns ( 59.86 % )
+        Info: Total interconnect delay = 0.987 ns ( 40.14 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 6.857 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X13_Y15_N7; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[3]'
+        Info: 2: + IC(1.794 ns) + CELL(0.378 ns) = 2.172 ns; Loc. = LCCOMB_X14_Y22_N24; Fanout = 1; COMB Node = 'Salida:salir|salida[7]~103'
+        Info: 3: + IC(2.541 ns) + CELL(2.144 ns) = 6.857 ns; Loc. = PIN_V19; Fanout = 0; PIN Node = 'respuesta[7]'
+        Info: Total cell delay = 2.522 ns ( 36.78 % )
+        Info: Total interconnect delay = 4.335 ns ( 63.22 % )
+Info: Longest tpd from source pin "b[5]" to destination pin "respuesta[7]" is 14.829 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.807 ns) = 0.807 ns; Loc. = PIN_R9; Fanout = 16; PIN Node = 'b[5]'
+    Info: 2: + IC(5.303 ns) + CELL(2.570 ns) = 8.680 ns; Loc. = DSPMULT_X12_Y22_N0; Fanout = 1; COMB Node = 'Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_mult2~DATAOUT7'
+    Info: 3: + IC(0.000 ns) + CELL(0.600 ns) = 9.280 ns; Loc. = DSPOUT_X12_Y22_N2; Fanout = 1; COMB Node = 'Multiplicador:multiplicacion|lpm_mult:Mult0|mult_bm01:auto_generated|mac_out1~DATAOUT7'
+    Info: 4: + IC(0.507 ns) + CELL(0.357 ns) = 10.144 ns; Loc. = LCCOMB_X14_Y22_N24; Fanout = 1; COMB Node = 'Salida:salir|salida[7]~103'
+    Info: 5: + IC(2.541 ns) + CELL(2.144 ns) = 14.829 ns; Loc. = PIN_V19; Fanout = 0; PIN Node = 'respuesta[7]'
+    Info: Total cell delay = 6.478 ns ( 43.68 % )
+    Info: Total interconnect delay = 8.351 ns ( 56.32 % )
+Info: th for register "Calculadora_controller:maquina_estados|estado[2]" (data pin = "Operacion[0]", clock pin = "clock") is -3.329 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.459 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.644 ns) + CELL(0.618 ns) = 2.459 ns; Loc. = LCFF_X13_Y15_N5; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[2]'
+        Info: Total cell delay = 1.472 ns ( 59.86 % )
+        Info: Total interconnect delay = 0.987 ns ( 40.14 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.937 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_V22; Fanout = 3; PIN Node = 'Operacion[0]'
+        Info: 2: + IC(4.586 ns) + CELL(0.366 ns) = 5.782 ns; Loc. = LCCOMB_X13_Y15_N4; Fanout = 1; COMB Node = 'Calculadora_controller:maquina_estados|estado~9'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.937 ns; Loc. = LCFF_X13_Y15_N5; Fanout = 16; REG Node = 'Calculadora_controller:maquina_estados|estado[2]'
+        Info: Total cell delay = 1.351 ns ( 22.76 % )
+        Info: Total interconnect delay = 4.586 ns ( 77.24 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Tue Apr 12 18:58:24 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:00
+
+

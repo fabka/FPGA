@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Tue Apr 12 18:57:22 2016
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Revision Name : Calculadora
+Top-level Entity Name : Calculadora
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 45
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 36
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 1
+Total PLLs : 0
+Total DLLs : 0
