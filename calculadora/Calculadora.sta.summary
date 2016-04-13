@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Counter:contador|temp[0]'
+Slack : -2.476
+TNS   : -2.476
+
+Type  : Slow Model Setup 'clock'
+Slack : -0.673
+TNS   : -2.270
+
+Type  : Slow Model Hold 'clock'
+Slack : -2.224
+TNS   : -8.984
+
+Type  : Slow Model Hold 'Counter:contador|temp[0]'
+Slack : -0.112
+TNS   : -0.112
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.000
+TNS   : -2.792
+
+Type  : Slow Model Minimum Pulse Width 'Counter:contador|temp[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Counter:contador|temp[0]'
+Slack : -1.187
+TNS   : -1.187
+
+Type  : Fast Model Setup 'clock'
+Slack : -0.028
+TNS   : -0.084
+
+Type  : Fast Model Hold 'clock'
+Slack : -1.328
+TNS   : -4.863
+
+Type  : Fast Model Hold 'Counter:contador|temp[0]'
+Slack : -0.062
+TNS   : -0.062
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.000
+TNS   : -3.080
+
+Type  : Fast Model Minimum Pulse Width 'Counter:contador|temp[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

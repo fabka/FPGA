@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\FPGA\calculadora\simulation\modelsim
+vCalculadora
+!i10b 1
+!s100 eHIO5kPYU3;lL]ofo:Xei1
+ILjjNOkk`TQF;=de6aeN6F0
+Vk<o^^EDG;cO4=c7?0llcO3
+Z1 dC:\FPGA\calculadora\simulation\modelsim
+w1460508397
+8Calculadora.vo
+FCalculadora.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1460508701.865000
+!s107 Calculadora.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Calculadora.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+n@calculadora

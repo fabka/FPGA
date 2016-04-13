@@ -1,0 +1,1497 @@
+$comment
+	File created using the following command:
+		vcd file Calculadora.msim.vcd -direction
+$end
+$date
+	Tue Apr 12 19:53:36 2016
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Calculadora_vlg_vec_tst $end
+$var reg 8 ! a [7:0] $end
+$var reg 8 " b [7:0] $end
+$var reg 1 # clock $end
+$var reg 1 $ igual $end
+$var reg 2 % Operacion [1:0] $end
+$var reg 1 & reset $end
+$var wire 1 ' respuesta [14] $end
+$var wire 1 ( respuesta [13] $end
+$var wire 1 ) respuesta [12] $end
+$var wire 1 * respuesta [11] $end
+$var wire 1 + respuesta [10] $end
+$var wire 1 , respuesta [9] $end
+$var wire 1 - respuesta [8] $end
+$var wire 1 . respuesta [7] $end
+$var wire 1 / respuesta [6] $end
+$var wire 1 0 respuesta [5] $end
+$var wire 1 1 respuesta [4] $end
+$var wire 1 2 respuesta [3] $end
+$var wire 1 3 respuesta [2] $end
+$var wire 1 4 respuesta [1] $end
+$var wire 1 5 respuesta [0] $end
+$var wire 1 6 sampler $end
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT15 $end
+$var wire 1 > multiplicacion|Mult0|auto_generated|mac_out1~0 $end
+$var wire 1 ? multiplicacion|Mult0|auto_generated|mac_out1~1 $end
+$var wire 1 @ clock~combout $end
+$var wire 1 A clock~clkctrl_outclk $end
+$var wire 1 B contador|temp~1_combout $end
+$var wire 1 C reset~combout $end
+$var wire 1 D reset~clkctrl_outclk $end
+$var wire 1 E contador|temp~2_combout $end
+$var wire 1 F contador|temp~3_combout $end
+$var wire 1 G contador|temp~0_combout $end
+$var wire 1 H contador|Mux3~0_combout $end
+$var wire 1 I contador|Mux2~0_combout $end
+$var wire 1 J contador|T0~combout $end
+$var wire 1 K igual~combout $end
+$var wire 1 L maquina_estados|estado~0_combout $end
+$var wire 1 M maquina_estados|estado~3_combout $end
+$var wire 1 N maquina_estados|estado~1_combout $end
+$var wire 1 O maquina_estados|estado~2_combout $end
+$var wire 1 P multiplicacion|Mult0|auto_generated|mac_mult2~dataout $end
+$var wire 1 Q multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT1 $end
+$var wire 1 R multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT2 $end
+$var wire 1 S multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT3 $end
+$var wire 1 T multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT4 $end
+$var wire 1 U multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT5 $end
+$var wire 1 V multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT6 $end
+$var wire 1 W multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT7 $end
+$var wire 1 X multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT8 $end
+$var wire 1 Y multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT9 $end
+$var wire 1 Z multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT10 $end
+$var wire 1 [ multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT11 $end
+$var wire 1 \ multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT12 $end
+$var wire 1 ] multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT13 $end
+$var wire 1 ^ multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT14 $end
+$var wire 1 _ multiplicacion|Mult0|auto_generated|mac_mult2~DATAOUT15 $end
+$var wire 1 ` multiplicacion|Mult0|auto_generated|mac_mult2~2 $end
+$var wire 1 a multiplicacion|Mult0|auto_generated|mac_mult2~3 $end
+$var wire 1 b multiplicacion|Mult0|auto_generated|mac_out1~dataout $end
+$var wire 1 c resta|r[0]~1_sumout $end
+$var wire 1 d suma|Add0~1_sumout $end
+$var wire 1 e salir|salida[0]~0_combout $end
+$var wire 1 f multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT1 $end
+$var wire 1 g resta|r[0]~2 $end
+$var wire 1 h resta|r[0]~3 $end
+$var wire 1 i resta|r[1]~5_sumout $end
+$var wire 1 j suma|Add0~2 $end
+$var wire 1 k suma|Add0~5_sumout $end
+$var wire 1 l salir|salida[1]~1_combout $end
+$var wire 1 m multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT2 $end
+$var wire 1 n suma|Add0~6 $end
+$var wire 1 o suma|Add0~9_sumout $end
+$var wire 1 p resta|r[1]~6 $end
+$var wire 1 q resta|r[1]~7 $end
+$var wire 1 r resta|r[2]~9_sumout $end
+$var wire 1 s salir|salida[2]~2_combout $end
+$var wire 1 t multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT3 $end
+$var wire 1 u resta|r[2]~10 $end
+$var wire 1 v resta|r[2]~11 $end
+$var wire 1 w resta|r[3]~13_sumout $end
+$var wire 1 x suma|Add0~10 $end
+$var wire 1 y suma|Add0~13_sumout $end
+$var wire 1 z salir|salida[3]~3_combout $end
+$var wire 1 { resta|r[3]~14 $end
+$var wire 1 | resta|r[3]~15 $end
+$var wire 1 } resta|r[4]~17_sumout $end
+$var wire 1 ~ multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT4 $end
+$var wire 1 !! suma|Add0~14 $end
+$var wire 1 "! suma|Add0~17_sumout $end
+$var wire 1 #! salir|salida[4]~4_combout $end
+$var wire 1 $! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT5 $end
+$var wire 1 %! resta|r[4]~18 $end
+$var wire 1 &! resta|r[4]~19 $end
+$var wire 1 '! resta|r[5]~21_sumout $end
+$var wire 1 (! suma|Add0~18 $end
+$var wire 1 )! suma|Add0~21_sumout $end
+$var wire 1 *! salir|salida[5]~5_combout $end
+$var wire 1 +! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT6 $end
+$var wire 1 ,! resta|r[5]~22 $end
+$var wire 1 -! resta|r[5]~23 $end
+$var wire 1 .! resta|r[6]~25_sumout $end
+$var wire 1 /! suma|Add0~22 $end
+$var wire 1 0! suma|Add0~25_sumout $end
+$var wire 1 1! salir|salida[6]~6_combout $end
+$var wire 1 2! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT7 $end
+$var wire 1 3! suma|Add0~26 $end
+$var wire 1 4! suma|Add0~29_sumout $end
+$var wire 1 5! resta|r[6]~26 $end
+$var wire 1 6! resta|r[6]~27 $end
+$var wire 1 7! resta|r[7]~29_sumout $end
+$var wire 1 8! salir|salida[7]~7_combout $end
+$var wire 1 9! suma|Add0~30 $end
+$var wire 1 :! suma|Add0~33_sumout $end
+$var wire 1 ;! resta|r[7]~30 $end
+$var wire 1 <! resta|r[7]~31 $end
+$var wire 1 =! resta|r[8]~33_sumout $end
+$var wire 1 >! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT8 $end
+$var wire 1 ?! salir|salida[8]~8_combout $end
+$var wire 1 @! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT9 $end
+$var wire 1 A! salir|salida[9]~9_combout $end
+$var wire 1 B! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT10 $end
+$var wire 1 C! salir|salida[10]~10_combout $end
+$var wire 1 D! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT11 $end
+$var wire 1 E! salir|salida[11]~11_combout $end
+$var wire 1 F! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT12 $end
+$var wire 1 G! salir|salida[12]~12_combout $end
+$var wire 1 H! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT13 $end
+$var wire 1 I! salir|salida[13]~13_combout $end
+$var wire 1 J! multiplicacion|Mult0|auto_generated|mac_out1~DATAOUT14 $end
+$var wire 1 K! salir|salida[14]~14_combout $end
+$var wire 1 L! contador|temp [0] $end
+$var wire 1 M! contador|temp [1] $end
+$var wire 1 N! contador|temp [2] $end
+$var wire 1 O! contador|temp [3] $end
+$var wire 1 P! Operacion~combout [1] $end
+$var wire 1 Q! Operacion~combout [0] $end
+$var wire 1 R! a~combout [7] $end
+$var wire 1 S! a~combout [6] $end
+$var wire 1 T! a~combout [5] $end
+$var wire 1 U! a~combout [4] $end
+$var wire 1 V! a~combout [3] $end
+$var wire 1 W! a~combout [2] $end
+$var wire 1 X! a~combout [1] $end
+$var wire 1 Y! a~combout [0] $end
+$var wire 1 Z! b~combout [7] $end
+$var wire 1 [! b~combout [6] $end
+$var wire 1 \! b~combout [5] $end
+$var wire 1 ]! b~combout [4] $end
+$var wire 1 ^! b~combout [3] $end
+$var wire 1 _! b~combout [2] $end
+$var wire 1 `! b~combout [1] $end
+$var wire 1 a! b~combout [0] $end
+$var wire 1 b! maquina_estados|estado [3] $end
+$var wire 1 c! maquina_estados|estado [2] $end
+$var wire 1 d! maquina_estados|estado [1] $end
+$var wire 1 e! maquina_estados|estado [0] $end
+$var wire 1 f! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [17] $end
+$var wire 1 g! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [16] $end
+$var wire 1 h! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [15] $end
+$var wire 1 i! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [14] $end
+$var wire 1 j! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [13] $end
+$var wire 1 k! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [12] $end
+$var wire 1 l! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [11] $end
+$var wire 1 m! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [10] $end
+$var wire 1 n! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [9] $end
+$var wire 1 o! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [8] $end
+$var wire 1 p! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [7] $end
+$var wire 1 q! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [6] $end
+$var wire 1 r! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [5] $end
+$var wire 1 s! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [4] $end
+$var wire 1 t! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [3] $end
+$var wire 1 u! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [2] $end
+$var wire 1 v! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [1] $end
+$var wire 1 w! multiplicacion|Mult0|auto_generated|mac_out1_DATAOUT_bus [0] $end
+$var wire 1 x! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [17] $end
+$var wire 1 y! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [16] $end
+$var wire 1 z! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [15] $end
+$var wire 1 {! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [14] $end
+$var wire 1 |! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [13] $end
+$var wire 1 }! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [12] $end
+$var wire 1 ~! multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [11] $end
+$var wire 1 !" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [10] $end
+$var wire 1 "" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [9] $end
+$var wire 1 #" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [8] $end
+$var wire 1 $" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [7] $end
+$var wire 1 %" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [6] $end
+$var wire 1 &" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [5] $end
+$var wire 1 '" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [4] $end
+$var wire 1 (" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [3] $end
+$var wire 1 )" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [2] $end
+$var wire 1 *" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [1] $end
+$var wire 1 +" multiplicacion|Mult0|auto_generated|mac_mult2_DATAOUT_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b110010 "
+0#
+0$
+b0 %
+0&
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+x6
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+0A
+1B
+0C
+0D
+0E
+0F
+0G
+1H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+1h
+1i
+0j
+1k
+0l
+0m
+0n
+0o
+0p
+0q
+1r
+0s
+0t
+0u
+0v
+1w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+1"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+1)!
+0*!
+0+!
+0,!
+0-!
+1.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+17!
+08!
+09!
+0:!
+0;!
+0<!
+1=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0O!
+0N!
+0M!
+0L!
+0Q!
+0P!
+0Y!
+0X!
+0W!
+0V!
+0U!
+0T!
+0S!
+0R!
+0a!
+1`!
+0_!
+0^!
+1]!
+1\!
+0[!
+0Z!
+0e!
+0d!
+0c!
+0b!
+0w!
+0v!
+0u!
+0t!
+0s!
+0r!
+0q!
+0p!
+0o!
+0n!
+0m!
+0l!
+0k!
+0j!
+0i!
+0h!
+0g!
+0f!
+0+"
+0*"
+0)"
+0("
+0'"
+0&"
+0%"
+0$"
+0#"
+0""
+0!"
+0~!
+0}!
+0|!
+0{!
+0z!
+0y!
+0x!
+$end
+#5000
+1#
+06
+1@
+1A
+1O!
+0B
+1F
+0H
+#10000
+1&
+0#
+16
+1C
+0@
+0A
+1D
+0O!
+1B
+0F
+1H
+#15000
+1#
+06
+1@
+1A
+#20000
+b1 %
+1$
+0&
+0#
+16
+1Q!
+1K
+0C
+0@
+0A
+0D
+1N
+1M
+#25000
+1#
+06
+1@
+1A
+1O!
+1b!
+1e!
+0B
+1F
+0H
+#30000
+0#
+16
+0@
+0A
+#35000
+1#
+06
+1@
+1A
+#40000
+b0 %
+0$
+0#
+16
+0Q!
+0K
+0@
+0A
+#45000
+1#
+06
+1@
+1A
+#50000
+0#
+16
+0@
+0A
+#55000
+1#
+06
+1@
+1A
+#60000
+0#
+16
+0@
+0A
+#65000
+1#
+06
+1@
+1A
+#70000
+0#
+16
+0@
+0A
+#75000
+1#
+06
+1@
+1A
+#80000
+0#
+16
+0@
+0A
+#85000
+1#
+06
+1@
+1A
+#90000
+0#
+16
+0@
+0A
+#95000
+1#
+06
+1@
+1A
+#100000
+0#
+16
+0@
+0A
+#105000
+1#
+06
+1@
+1A
+#110000
+0#
+16
+0@
+0A
+#115000
+1#
+06
+1@
+1A
+#120000
+0#
+16
+0@
+0A
+#125000
+1#
+06
+1@
+1A
+#130000
+0#
+16
+0@
+0A
+#135000
+1#
+06
+1@
+1A
+#140000
+0#
+16
+0@
+0A
+#145000
+1#
+06
+1@
+1A
+#150000
+0#
+16
+0@
+0A
+#155000
+1#
+06
+1@
+1A
+#160000
+0#
+16
+0@
+0A
+#165000
+1#
+06
+1@
+1A
+#170000
+0#
+16
+0@
+0A
+#175000
+1#
+06
+1@
+1A
+#180000
+0#
+16
+0@
+0A
+#185000
+1#
+06
+1@
+1A
+#190000
+0#
+16
+0@
+0A
+#195000
+1#
+06
+1@
+1A
+#200000
+0#
+16
+0@
+0A
+#205000
+1#
+06
+1@
+1A
+#210000
+0#
+16
+0@
+0A
+#215000
+1#
+06
+1@
+1A
+#220000
+0#
+16
+0@
+0A
+#225000
+1#
+06
+1@
+1A
+#230000
+0#
+16
+0@
+0A
+#235000
+1#
+06
+1@
+1A
+#240000
+b110011 "
+0#
+16
+1a!
+0@
+0A
+1c
+0h
+1d
+0i
+#245000
+1#
+06
+1@
+1A
+#250000
+1$
+0#
+16
+1K
+0@
+0A
+#255000
+1#
+06
+1@
+1A
+#260000
+0$
+0#
+16
+0K
+0@
+0A
+#265000
+1#
+06
+1@
+1A
+#270000
+0#
+16
+0@
+0A
+#275000
+1#
+06
+1@
+1A
+#280000
+0#
+16
+0@
+0A
+#285000
+1#
+06
+1@
+1A
+#290000
+0#
+16
+0@
+0A
+#295000
+1#
+06
+1@
+1A
+#300000
+0#
+16
+0@
+0A
+#305000
+1#
+06
+1@
+1A
+#310000
+0#
+16
+0@
+0A
+#315000
+1#
+06
+1@
+1A
+#320000
+0#
+16
+0@
+0A
+#325000
+1#
+06
+1@
+1A
+#330000
+0#
+16
+0@
+0A
+#335000
+1#
+06
+1@
+1A
+#340000
+0#
+16
+0@
+0A
+#345000
+1#
+06
+1@
+1A
+#350000
+0#
+16
+0@
+0A
+#355000
+1#
+06
+1@
+1A
+#360000
+0#
+16
+0@
+0A
+#365000
+1#
+06
+1@
+1A
+#370000
+0#
+16
+0@
+0A
+#375000
+1#
+06
+1@
+1A
+#380000
+0#
+16
+0@
+0A
+#385000
+1#
+06
+1@
+1A
+#390000
+0#
+16
+0@
+0A
+#395000
+1#
+06
+1@
+1A
+#400000
+0#
+16
+0@
+0A
+#405000
+1#
+06
+1@
+1A
+#410000
+0#
+16
+0@
+0A
+#415000
+1#
+06
+1@
+1A
+#420000
+0#
+16
+0@
+0A
+#425000
+1#
+06
+1@
+1A
+#430000
+0#
+16
+0@
+0A
+#435000
+1#
+06
+1@
+1A
+#440000
+0#
+16
+0@
+0A
+#445000
+1#
+06
+1@
+1A
+#450000
+0#
+16
+0@
+0A
+#455000
+1#
+06
+1@
+1A
+#460000
+0#
+16
+0@
+0A
+#465000
+1#
+06
+1@
+1A
+#470000
+0#
+16
+0@
+0A
+#475000
+1#
+06
+1@
+1A
+#480000
+b110111 "
+b110101 "
+b110100 "
+0#
+16
+0a!
+0`!
+1_!
+0@
+0A
+0c
+1h
+0d
+1i
+0k
+1o
+0r
+1p
+0i
+1r
+#485000
+1#
+06
+1@
+1A
+#490000
+b10 %
+1$
+0#
+16
+1P!
+1K
+0@
+0A
+#495000
+1#
+06
+1@
+1A
+#500000
+b0 %
+0$
+0#
+16
+0P!
+0K
+0@
+0A
+#505000
+1#
+06
+1@
+1A
+#510000
+0#
+16
+0@
+0A
+#515000
+1#
+06
+1@
+1A
+#520000
+0#
+16
+0@
+0A
+#525000
+1#
+06
+1@
+1A
+#530000
+0#
+16
+0@
+0A
+#535000
+1#
+06
+1@
+1A
+#540000
+0#
+16
+0@
+0A
+#545000
+1#
+06
+1@
+1A
+#550000
+0#
+16
+0@
+0A
+#555000
+1#
+06
+1@
+1A
+#560000
+0#
+16
+0@
+0A
+#565000
+1#
+06
+1@
+1A
+#570000
+0#
+16
+0@
+0A
+#575000
+1#
+06
+1@
+1A
+#580000
+0#
+16
+0@
+0A
+#585000
+1#
+06
+1@
+1A
+#590000
+0#
+16
+0@
+0A
+#595000
+1#
+06
+1@
+1A
+#600000
+0#
+16
+0@
+0A
+#605000
+1#
+06
+1@
+1A
+#610000
+0#
+16
+0@
+0A
+#615000
+1#
+06
+1@
+1A
+#620000
+0#
+16
+0@
+0A
+#625000
+1#
+06
+1@
+1A
+#630000
+0#
+16
+0@
+0A
+#635000
+1#
+06
+1@
+1A
+#640000
+0#
+16
+0@
+0A
+#645000
+1#
+06
+1@
+1A
+#650000
+0#
+16
+0@
+0A
+#655000
+1#
+06
+1@
+1A
+#660000
+0#
+16
+0@
+0A
+#665000
+1#
+06
+1@
+1A
+#670000
+0#
+16
+0@
+0A
+#675000
+1#
+06
+1@
+1A
+#680000
+0#
+16
+0@
+0A
+#685000
+1#
+06
+1@
+1A
+#690000
+0#
+16
+0@
+0A
+#695000
+1#
+06
+1@
+1A
+#700000
+0#
+16
+0@
+0A
+#705000
+1#
+06
+1@
+1A
+#710000
+0#
+16
+0@
+0A
+#715000
+1#
+06
+1@
+1A
+#720000
+b110101 "
+0#
+16
+1a!
+0@
+0A
+1c
+0h
+1d
+0p
+1i
+0r
+#725000
+1#
+06
+1@
+1A
+#730000
+0#
+16
+0@
+0A
+#735000
+1#
+06
+1@
+1A
+#740000
+0#
+16
+0@
+0A
+#745000
+1#
+06
+1@
+1A
+#750000
+0#
+16
+0@
+0A
+#755000
+1#
+06
+1@
+1A
+#760000
+0#
+16
+0@
+0A
+#765000
+1#
+06
+1@
+1A
+#770000
+0#
+16
+0@
+0A
+#775000
+1#
+06
+1@
+1A
+#780000
+0#
+16
+0@
+0A
+#785000
+1#
+06
+1@
+1A
+#790000
+0#
+16
+0@
+0A
+#795000
+1#
+06
+1@
+1A
+#800000
+0#
+16
+0@
+0A
+#805000
+1#
+06
+1@
+1A
+#810000
+0#
+16
+0@
+0A
+#815000
+1#
+06
+1@
+1A
+#820000
+0#
+16
+0@
+0A
+#825000
+1#
+06
+1@
+1A
+#830000
+0#
+16
+0@
+0A
+#835000
+1#
+06
+1@
+1A
+#840000
+0#
+16
+0@
+0A
+#845000
+1#
+06
+1@
+1A
+#850000
+0#
+16
+0@
+0A
+#855000
+1#
+06
+1@
+1A
+#860000
+0#
+16
+0@
+0A
+#865000
+1#
+06
+1@
+1A
+#870000
+0#
+16
+0@
+0A
+#875000
+1#
+06
+1@
+1A
+#880000
+0#
+16
+0@
+0A
+#885000
+1#
+06
+1@
+1A
+#890000
+0#
+16
+0@
+0A
+#895000
+1#
+06
+1@
+1A
+#900000
+0#
+16
+0@
+0A
+#905000
+1#
+06
+1@
+1A
+#910000
+0#
+16
+0@
+0A
+#915000
+1#
+06
+1@
+1A
+#920000
+0#
+16
+0@
+0A
+#925000
+1#
+06
+1@
+1A
+#930000
+0#
+16
+0@
+0A
+#935000
+1#
+06
+1@
+1A
+#940000
+0#
+16
+0@
+0A
+#945000
+1#
+06
+1@
+1A
+#950000
+0#
+16
+0@
+0A
+#955000
+1#
+06
+1@
+1A
+#960000
+b110111 "
+b110110 "
+0#
+16
+0a!
+1`!
+0@
+0A
+0c
+1h
+0d
+0i
+1k
+1i
+#965000
+1#
+06
+1@
+1A
+#970000
+0#
+16
+0@
+0A
+#975000
+1#
+06
+1@
+1A
+#980000
+0#
+16
+0@
+0A
+#985000
+1#
+06
+1@
+1A
+#990000
+0#
+16
+0@
+0A
+#995000
+1#
+06
+1@
+1A
+#1000000

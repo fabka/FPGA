@@ -1,0 +1,44 @@
+# do Calculadora.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Calculadora
+# 
+# Top level modules:
+# 	Calculadora
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Calculadora_vlg_sample_tst
+# -- Compiling module Calculadora_vlg_check_tst
+# -- Compiling module Calculadora_vlg_vec_tst
+# 
+# Top level modules:
+# 	Calculadora_vlg_vec_tst
+# vsim -L stratixii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Calculadora_vlg_vec_tst 
+# Loading work.Calculadora_vlg_vec_tst
+# Loading work.Calculadora
+# Loading stratixii_ver.stratixii_io
+# Loading stratixii_ver.stratixii_io_register
+# Loading stratixii_ver.stratixii_io_latch
+# Loading stratixii_ver.stratixii_and1
+# Loading stratixii_ver.stratixii_mux21
+# Loading stratixii_ver.stratixii_asynch_io
+# Loading stratixii_ver.stratixii_clkctrl
+# Loading stratixii_ver.stratixii_mux41
+# Loading stratixii_ver.stratixii_ena_reg
+# Loading stratixii_ver.stratixii_lcell_comb
+# Loading stratixii_ver.stratixii_lcell_ff
+# Loading stratixii_ver.stratixii_mac_mult
+# Loading stratixii_ver.stratixii_mac_register
+# Loading stratixii_ver.stratixii_mac_mult_block
+# Loading stratixii_ver.stratixii_mac_rs_block
+# Loading stratixii_ver.stratixii_mac_out
+# Loading stratixii_ver.stratixii_mac_out_internal
+# Loading stratixii_ver.stratixii_mac_out_input_interface
+# Loading stratixii_ver.stratixii_mac_out_add_sub_acc_unit
+# Loading stratixii_ver.stratixii_mac_out_output_interface
+# Loading stratixii_ver.stratixii_reorder_output
+# Loading work.Calculadora_vlg_sample_tst
+# Loading work.Calculadora_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Calculadora.vt(409)
+#    Time: 1 us  Iteration: 0  Instance: /Calculadora_vlg_vec_tst/tb_out
